@@ -7,6 +7,9 @@
 #include <QScreen>
 
 #include <cmath>
+#include <sstream>
+#include <string>
+#include <vector>
 
 Triangle::Triangle()
     : m_t(0)
@@ -92,11 +95,9 @@ void TriangleRenderer::paint()
     };
 
     /// Color values
-    GLfloat colors[] = {
-        (GLfloat)m_t, 0.0f, 0.0f,
-        0.0f, (GLfloat)m_t, 0.0f,
-        0.0f, 0.0f, (GLfloat)m_t
-    };
+    GLfloat colors[] = {1.0f - m_t, 0.0f, m_t,
+                        1.0f - m_t, 0.0f, m_t,
+                        1.0f - m_t, 0.0f, m_t};
 
     glVertexAttribPointer(m_posAttr, 2, GL_FLOAT, GL_FALSE, 0, vertices);
     glVertexAttribPointer(m_colAttr, 3, GL_FLOAT, GL_FALSE, 0, colors);

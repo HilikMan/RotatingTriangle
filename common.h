@@ -1,6 +1,8 @@
 #ifndef COMMON_H
 #define COMMON_H
 
+
+
 static const char *vertexShaderSource =
     "attribute highp vec4 posAttr;\n"
     "attribute lowp vec4 colAttr;\n"
