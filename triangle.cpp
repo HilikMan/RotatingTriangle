@@ -7,9 +7,6 @@
 #include <QScreen>
 
 #include <cmath>
-#include <sstream>
-#include <string>
-#include <vector>
 
 Triangle::Triangle()
     : m_t(0)
